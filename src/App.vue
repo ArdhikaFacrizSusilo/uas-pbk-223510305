@@ -12,47 +12,48 @@
             label="TUGAS ARDHIKA 1 - 7"
           >
             <q-list>
-              <q-item clickable v-close-popup tag="router-link" :to="{ name: 'Tugas1' }">
+              <q-item clickable v-close-popup tag="router-link" :to="{ name: 'Tugas1' }" @click="goToHome">
                 <q-item-section>
                   <q-item-label>Tugas 1</q-item-label>
                 </q-item-section>
               </q-item>
 
-              <q-item clickable v-close-popup tag="router-link" :to="{ name: 'Tugas2' }">
+              <q-item clickable v-close-popup tag="router-link" :to="{ name: 'Tugas2' }" @click="goToHome">
                 <q-item-section>
                   <q-item-label>Tugas 2</q-item-label>
                 </q-item-section>
               </q-item>
 
-              <q-item clickable v-close-popup tag="router-link" :to="{ name: 'Tugas3' }">
+              <q-item clickable v-close-popup tag="router-link" :to="{ name: 'Tugas3' }" @click="goToHome">
                 <q-item-section>
                   <q-item-label>Tugas 3</q-item-label>
                 </q-item-section>
               </q-item>
 
-              <q-item clickable v-close-popup tag="router-link" :to="{ name: 'Tugas4' }">
+              <q-item clickable v-close-popup tag="router-link" :to="{ name: 'Tugas4' }" @click="goToHome">
                 <q-item-section>
                   <q-item-label>Tugas 4</q-item-label>
                 </q-item-section>
               </q-item>
 
-              <q-item clickable v-close-popup tag="router-link" :to="{ name: 'Tugas5' }">
+              <q-item clickable v-close-popup tag="router-link" :to="{ name: 'Tugas5' }" @click="goToHome">
                 <q-item-section>
                   <q-item-label>Tugas 5</q-item-label>
                 </q-item-section>
               </q-item>
 
-              <q-item clickable v-close-popup tag="router-link" :to="{ name: 'Tugas6' }">
+              <q-item clickable v-close-popup tag="router-link" :to="{ name: 'Tugas6' }" @click="goToHome">
                 <q-item-section>
                   <q-item-label>Tugas 6</q-item-label>
                 </q-item-section>
               </q-item>
 
-              <q-item clickable v-close-popup tag="router-link" :to="{ name: 'Tugas7' }">
+              <q-item clickable v-close-popup tag="router-link" :to="{ name: 'Tugas7' }" @click="goToHome">
                 <q-item-section>
                   <q-item-label>Tugas 7</q-item-label>
                 </q-item-section>
               </q-item>
+
             </q-list>
           </q-btn-dropdown>
         </div>
@@ -77,10 +78,17 @@
 
 <script>
 import WeatherWidget from './components/WeatherWidget.vue';
+import { useRouter } from 'vue-router';
 
 export default {
   components: {
     WeatherWidget
+  },
+  methods: {
+    goToHome() {
+      const router = useRouter();
+      router.push('/');
+    }
   }
 };
 </script>
